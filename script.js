@@ -76,14 +76,19 @@ class GPXAnalyzer {
                     }
                 },
                 interaction: {
-                    intersect: true,
-                    mode: 'point'
+                    // intersect: true,
+                    // mode: 'point'
+                    intersect: false,
+                    mode: 'nearest' // 最近的點
+
                 },
                 plugins: {
                     tooltip: {
                         enabled: true,
-                        mode: 'point',
-                        intersect: true,
+                        // mode: 'point',
+                        // intersect: true,
+                        intersect: false,
+                        mode: 'nearest',    
                         callbacks: {
                             title: function(context) {
                                 return '距離: ' + context[0].parsed.x.toFixed(2) + ' km';
